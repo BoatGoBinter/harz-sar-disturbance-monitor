@@ -1,7 +1,0 @@
-.pixi/
-data/
-*.tif
-*.nc
-.ipynb_checkpoints/
-__pycache__/
-EOF

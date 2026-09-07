@@ -1,0 +1,31 @@
+# Environment
+.pixi/
+
+# Data — regenerable, and far too large for git
+data/
+*.tif
+*.tiff
+*.nc
+*.zarr/
+*.gpkg
+*.geojson
+*.shp
+*.dbf
+*.shx
+*.prj
+*.cpg
+
+# Notebooks
+.ipynb_checkpoints/
+
+# Python
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.ruff_cache/
+
+# IDE
+.idea/
+
+# OS
+.DS_Store
