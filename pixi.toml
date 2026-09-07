@@ -1,0 +1,24 @@
+[workspace]
+channels = ["conda-forge"]
+name = "harz-sar-disturbance-monitor"
+platforms = ["linux-64"]
+version = "0.1.0"
+
+[tasks]
+
+[dependencies]
+python = "3.12.*"
+xarray = ">=2026.7.0,<2027"
+dask = ">=2026.8.0,<2027"
+rioxarray = ">=0.23.0,<0.24"
+rasterio = ">=1.5.1,<2"
+geopandas = ">=1.1.4,<2"
+shapely = ">=2.1.2,<3"
+pystac-client = ">=0.9.0,<0.10"
+odc-stac = ">=0.5.3,<0.6"
+numpy = ">=2.5.2,<3"
+scipy = ">=1.18.0,<2"
+matplotlib = ">=3.11.1,<4"
+jupyterlab = ">=4.6.3,<5"
+ruff = ">=0.16.6,<0.17"
+pytest = ">=9.1.1,<10"
