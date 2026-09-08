@@ -63,5 +63,5 @@ Lastly, this method is going to follow established work on SAR-based disturbance
 RADD alerts (Reiche et al.), Rüetschi et al. on windthrow in Switzerland, and König et al. on bark beetle in Central Europe.
 
 I want this project to be reproducible. Thus, the repo can be cloned and ran with ``pixi install`` to get the same environment
-(making the notebooks rerunnable.) Moreover, the AI is generated from the code and the Sen-1 data is fetched from Microsoft's public STAC endpoint.
+(making the notebooks rerunnable.) Moreover, the AOI is generated from the code and the Sen-1 data is fetched from Microsoft's public STAC endpoint.
 The only thing needed is the DLR reference raster. 
