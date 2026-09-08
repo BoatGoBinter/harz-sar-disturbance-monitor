@@ -9,8 +9,8 @@ clear data is often not available for these time periods.
 However, there is a solution. We can use synthetic aperture radar (SAR), which does not have the aforementioned restraint. SAR works independent of cloud coverage and daylight. 
 Instead of color, SAR measures how much a transmitted signal is scattered back from the surface. SAR responds to structure and moisture; thus, when a canopy is removed, the signal will change.
 
-This project seeks to build a pipeline that tracks the Sentinel-1 backscatter through time across a chosen region of Harz. 
-Then, it will flag any sustained departures from each pixel's stable baseline, and emit the disturbance alerts with dates. 
+The goal of this project is to create a process that tracks Sentinel-1 backscatter through time across a specific region of Harz. The process will then flag any prolonged
+departures from each pixel's baseline (and then show the disturbance alerts with dates.)
 We will then compare these against the German Aerospace Center's (Deutsches Zentrum für Luft- und Raumfahrt) Forest Canopy Cover Loss product
 (an independent optically derived record of the monthly canopy loss). The comparison will measure the following: 
 1. how closely the two agree 2. how many days earlier the radar detects the same event.
@@ -19,9 +19,9 @@ We will then compare these against the German Aerospace Center's (Deutsches Zent
 
 Forest Canopy Cover Loss (FCCL), Germany — monthly, 10 m, Sept 2017 – Oct 2025.
 DLR/EOC. CC BY 4.0. DOI: 10.15489/ef9wwc5sff75
-File: FCCL_DE_P1M.tif (downloaded 2026-09-07)
+The downloaded file: FCCL_DE_P1M.tif (downloaded on 2026/09/07)
 
-Derived from Sentinel-2A/B and Landsat-8/9, clipped to the Thünen-Institute
+Taken from Sentinel-2A/B and Landsat-8/9, clipped to the Thünen-Institute
 stocked area 2018 (Langner et al. 2022).
 
 Thonfeld, F., Kacic, P., Holzwarth, S., Wegler, M., Asam, S., Kuenzer, C. (2026).
@@ -61,5 +61,7 @@ is like-for-like.
 
 Lastly, this method is going to follow established work on SAR-based disturbance detection:
 RADD alerts (Reiche et al.), Rüetschi et al. on windthrow in Switzerland, and König et al. on bark beetle in Central Europe.
-This project aspires to be a reproducible and possibly cloud-native implementation over a temperate AOI
-(hopefully with explicit latency benchmarking: how many days earlier radar pipeline detects forest disturbance vs optical reference across every event).
+
+I want this project to be reproducible. Thus, the repo can be cloned and ran with ``pixi install`` to get the same environment
+(making the notebooks rerunnable.) Moreover, the AI is generated from the code and the Sen-1 data is fetched from Microsoft's public STAC endpoint.
+The only thing needed is the DLR reference raster. 
